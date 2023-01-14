@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <!-- Google Fonts - League Spartan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main>
+        <div id="calculator">
+
+            <div id="calc_settings">
+                <h1>calc</h1>
+                <span>THEME</span>
+                <div class="toggle-container">
+                    <div class="toggle-labels">
+                        <label for="1">1</label>
+                        <label for="2">2</label>
+                        <label for="3">3</label>
+                    </div>
+                    <div class="toggles">
+                        <input type="radio" id="1" name="theme" value="theme_1" checked>
+                        <input type="radio" id="2" name="theme" value="theme_2">
+                        <input type="radio" id="3" name="theme" value="theme_3">
+                    </div>
+                </div>
+            </div>
+
+            <div id="calc_screen">0</div>
+
+            <div id="calc_buttons">
+                <button data-type="num" class="btn">7</button>
+                <button data-type="num" class="btn">8</button>
+                <button data-type="num" class="btn">9</button>
+                <button data-type="del" class="btn">DEL</button>
+                <button data-type="num" class="btn">4</button>
+                <button data-type="num" class="btn">5</button>
+                <button data-type="num" class="btn">6</button>
+                <button data-type="action" class="btn">+</button>
+                <button data-type="num" class="btn">1</button>
+                <button data-type="num" class="btn">2</button>
+                <button data-type="num" class="btn">3</button>
+                <button data-type="action" class="btn">-</button>
+                <button data-type="num" class="btn">.</button>
+                <button data-type="num" class="btn">0</button>
+                <button data-type="action" class="btn">/</button>
+                <button data-type="action" class="btn">x</button>
+                <button data-type="reset" class="btn col-span-2">RESET</button>
+                <button data-type="equals" class="btn col-span-2">=</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Bahadir Arzimbetov</a>.
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="themes.js"></script>
+</body>
+
+</html>

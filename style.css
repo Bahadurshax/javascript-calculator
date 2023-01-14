@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--main-bg);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.theme_1 {
+    --main-bg: hsl(222, 26%, 31%); 
+    --keypad-bg: hsl(223, 31%, 20%);
+    --screen-bg: hsl(224, 36%, 15%);
+    --toggle-bg: var(--keypad-bg);
+    --toggle-btn-bg: var(--equals-btn-bg);
+    --key-bg: hsl(30, 25%, 89%);
+    --key-color: hsl(221, 14%, 31%);
+    --key-shadow: hsl(28, 16%, 65%);
+    --secondary-key-bg: hsl(225, 21%, 49%);
+    --secondary-key-shadow: hsl(224, 28%, 35%);
+    --equals-btn-bg: hsl(6, 63%, 50%);
+    --equals-btn-shadow: hsl(6, 70%, 34%);
+    --text-color: hsl(0, 0%, 100%);
+}
+
+.theme_2 {
+    --main-bg: hsl(0, 0%, 90%);
+    --keypad-bg: hsl(0, 5%, 81%);
+    --screen-bg: hsl(0, 0%, 93%);
+    --toggle-bg: var(--keypad-bg);
+    --toggle-btn-bg: var(--equals-btn-bg);
+    --key-bg: hsl(45, 7%, 89%);
+    --key-color: hsl(60, 10%, 19%);
+    --key-shadow: hsl(35, 11%, 61%);
+    --secondary-key-bg: hsl(185, 42%, 37%);
+    --secondary-key-shadow: hsl(185, 58%, 25%);
+    --equals-btn-bg: hsl(25, 98%, 40%);
+    --equals-btn-shadow: hsl(25, 99%, 27%);
+    --text-color: var(--key-color);
+}
+
+.theme_3 {
+    --main-bg: hsl(268, 75%, 9%);
+    --keypad-bg: hsl(268, 71%, 12%);
+    --screen-bg: var(--keypad-bg);
+    --toggle-bg: var(--keypad-bg);
+    --toggle-btn-bg: var(--equals-btn-bg);
+    --key-bg: hsl(268, 47%, 21%);
+    --key-color: hsl(52, 100%, 62%);
+    --key-shadow: hsl(290, 70%, 36%);
+    --secondary-key-bg: hsl(281, 89%, 26%);
+    --secondary-key-shadow: hsl(285, 91%, 52%);
+    --equals-btn-bg: hsl(176, 100%, 44%);
+    --equals-btn-shadow: hsl(177, 92%, 70%);
+    --text-color: var(--key-color);
+}
+
+
+.col-span-2 {
+    grid-column: span 2;
+}
+
+
+#calculator {
+    width: 540px;
+    margin: 90px auto;
+}
+
+#calc_settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 30px;
+}
+
+#calc_settings > span {
+    margin-right: -50%;
+}
+
+.toggle-labels {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5px;
+}
+
+.toggles {
+    display: flex;
+    background-color: var(--toggle-bg);
+    border-radius: 12px;
+    padding: 3px 4px;
+}
+
+input[name="theme"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[name="theme"]:checked {
+    background-color: var(--toggle-btn-bg);
+}
+
+#calc_screen {
+    border-radius: 10px;
+    padding: 40px 30px;
+    margin-bottom: 20px;
+    background-color: var(--screen-bg);
+    font-size: 36px;
+    text-align: right;
+    font-weight: 700;
+}
+
+#calc_settings, #calc_screen {
+    color: var(--text-color);
+}
+
+#calc_buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: var(--keypad-bg);
+}
+
+.btn {
+    border: none;
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 0;
+    color: var(--key-color);
+    background-color: var(--key-bg);
+    box-shadow: 0 4px 0 0 var(--key-shadow);
+}
+
+.btn:hover, [name="theme"]:hover, .active {
+    filter: brightness(140%);
+}
+
+.btn[data-type="del"], .btn[data-type="reset"] {
+    background-color: var(--secondary-key-bg);
+    box-shadow: 0 4px 0 0 var(--secondary-key-shadow);
+    color: hsl(0, 0%, 100%);
+}
+
+.btn[data-type="equals"] {
+    background-color: var(--equals-btn-bg);
+    box-shadow: 0 4px 0 0 var(--equals-btn-shadow);
+    color: hsl(0, 0%, 100%);
+}
+
+
+.attribution {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.attribution a {
+    color: var(--text-color);
+}

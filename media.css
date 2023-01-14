@@ -1,0 +1,9 @@
+@media screen and (max-width: 480px) {
+    #calculator {
+        width: 90%;
+    }
+
+    #calc_settings > span {
+        margin-right: -40%;
+    }
+}
