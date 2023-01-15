@@ -41,6 +41,7 @@ calc_btns.addEventListener('click', e => {
             }
             curr = '';
             action = btn_content;
+            calc_finished = false;
             break;
         
         case 'equals':
